@@ -10,6 +10,7 @@ $route['login'] = 'auth/login';
 $route['pass'] = 'auth/pass';
 
 //bagian backend
+$route['dashboard'] = 'backend';
 
 //
 $route['404_override'] = '';

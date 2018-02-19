@@ -1,3 +1,13 @@
+
+<?php
+//bagian ambil foto
+$nim = $_SESSION['nim'];
+$nim = str_replace('.', '_', $nim);
+$tahun = substr($nim,0,2);
+
+ ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -173,24 +183,23 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="<?= base_url('assets/dist/img/user2-160x160.jpg')  ?>" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
+              <img src="http://www.amikom.ac.id/public/fotomhs/20<?=$tahun?>/<?=$nim?>.jpg" class="user-image" alt="User Image">
+              <span class="hidden-xs"><?=$_SESSION['nama_admin']?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="<?= base_url('assets/dist/img/user2-160x160.jpg')  ?>" class="img-circle" alt="User Image">
+
+
+
+                <img src="http://www.amikom.ac.id/public/fotomhs/20<?=$tahun?>/<?=$nim?>.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
+                  <?=$_SESSION['nama_admin']?>
                 </p>
               </li>
               <!-- Menu Footer-->
               <li class="user-footer">
-                <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
-                </div>
                 <div class="pull-right">
                   <a href="#" class="btn btn-default btn-flat">Sign out</a>
                 </div>
@@ -213,10 +222,10 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="<?= base_url('assets/dist/img/user2-160x160.jpg')  ?>" class="img-circle" alt="User Image">
+          <img src="http://www.amikom.ac.id/public/fotomhs/20<?=$tahun?>/<?=$nim?>.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
+          <p><?=$_SESSION['nama_admin']?></p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -242,7 +251,7 @@
           </li>
           <li class="treeview">
             <a href="#">
-              <i class="fa fa-pie-chart"></i>
+              <i class="fa fa-user"></i>
               <span>Pendaftaran</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
@@ -283,4 +292,3 @@
     <!-- /.sidebar -->
     <!-- === INI BAGIAN AKHIR MENU === -->
 </aside>
-      

@@ -36,6 +36,7 @@ $this->load->view('admin/pass');
        $user = $this->Auth_model->get_admin('email',$this->input->post('email'));
 
        $_SESSION['nama_admin']    = $user['nama_admin'];
+       $_SESSION['nim']    = $user['nim'];
        $_SESSION['logged_in']  = true;
        redirect('dashboard');
     }
