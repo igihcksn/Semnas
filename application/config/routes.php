@@ -6,7 +6,8 @@ $route['default_controller'] = 'welcome';
 
 
 //bagian auth
-$route['login'] = 'auth';
+$route['login'] = 'auth/login';
+$route['pass'] = 'auth/pass';
 
 //bagian backend
 
