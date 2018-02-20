@@ -4,13 +4,12 @@
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      Simple Tables
-      <small>preview of simple tables</small>
+      Admin
+      <small></small>
     </h1>
     <ol class="breadcrumb">
-      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-      <li><a href="#">Tables</a></li>
-      <li class="active">Simple</li>
+      <li><a href="dashboard"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li class="active">Admin</li>
     </ol>
   </section>
 
@@ -21,7 +20,7 @@
       <div class="col-xs-12">
         <div class="box">
           <div class="box-header">
-            <h3 class="box-title">Responsive Hover Table</h3>
+            <h3 class="box-title">List Admin</h3>
 
             <div class="box-tools">
               <div class="input-group input-group-sm" style="width: 150px;">
@@ -37,18 +36,26 @@
           <div class="box-body table-responsive no-padding">
             <table class="table table-hover">
               <tr>
+                <th>No</th>
                 <th>NIM</th>
                 <th>NAMA</th>
+                <th>Email</th>
                 <th>Status</th>
                 <th>ACTION</th>
               </tr>
+              <?php $no = 1;
+               foreach ($admin as $datas): ?>
+
               <tr>
-                <td>183</td>
-                <td>John Doe</td>
+                <td><?=$no?></td>
+                <td><?=$datas->nim?></td>
+                <td><?=$datas->nama_admin?></td>
+                <td><?=$datas->email?></td>
                 <td><span class="label label-success">Online</span></td>
                 <!-- <td><span class="label label-danger">Offline</span></td> -->
                 <td><button type="button" class="btn btn-info">Edit</button> <button type="button" class="btn btn-danger">Delete</button></td>
               </tr>
+            <?php $no++; endforeach; ?>
             </table>
           </div>
           <!-- /.box-body -->

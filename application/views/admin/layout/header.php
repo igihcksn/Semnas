@@ -276,7 +276,7 @@ $tahun = substr($nim,0,2);
             </ul>
           </li>
           <li class="treeview">
-            <a href="#">
+            <a href="admin">
               <i class="fa fa-user-secret"></i> <span>Admin</span>
             </a>
           </li>

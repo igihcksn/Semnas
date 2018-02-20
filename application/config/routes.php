@@ -14,6 +14,8 @@ $route['logout'] = 'auth/logout';
 $route['dashboard'] = 'backend';
 
 $route['admin'] = 'backend/admin';
+  //crud
+  $route['addadmin'] = 'backend/add_admin';
 //
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
