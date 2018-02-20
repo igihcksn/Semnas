@@ -12,7 +12,20 @@ class backend extends CI_Controller {
 
 	public function index()
 	{
+    if ($_SESSION['logged_in'] == false) {
+        redirect('login');
+    }
     $this->load->view('admin/layout/header');
 		$this->load->view('admin/dashboard');
 	}
+	public function admin()
+	{
+    if ($_SESSION['logged_in'] == false) {
+        redirect('login');
+    }
+    $this->load->view('admin/layout/header');
+		$this->load->view('admin/adminlist');
+    $this->load->view('admin/layout/footer');
+	}
+
 }

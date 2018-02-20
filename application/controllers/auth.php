@@ -23,6 +23,10 @@ $this->load->view('admin/pass');
 	public function login()
 	{
 
+    if (isset($_SESSION['logged_in']) == true) {
+        redirect('dashboard');
+    }
+
     $this->form_validation->set_rules('email', 'Email', 'trim|required|callback_CheckEmail',
                         array('required' => '%s harus di isi')
                 );
@@ -41,6 +45,12 @@ $this->load->view('admin/pass');
        redirect('dashboard');
     }
 	}
+
+
+  public function logout(){
+    $this->session->sess_destroy();
+    redirect('');
+  }
 
 
 

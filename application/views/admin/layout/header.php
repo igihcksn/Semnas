@@ -47,9 +47,9 @@ $tahun = substr($nim,0,2);
     <!-- Logo -->
     <a href="index2.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
+      <span class="logo-mini"><b>A</b>D</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
+      <span class="logo-lg"><b>Admin Panel</b>  </span>
     </a>
 
     <!-- Header Navbar: style can be found in header.less -->
@@ -201,7 +201,7 @@ $tahun = substr($nim,0,2);
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="logout" class="btn btn-default btn-flat">Logout</a>
                 </div>
               </li>
             </ul>
@@ -244,7 +244,7 @@ $tahun = substr($nim,0,2);
      <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">MAIN NAVIGATION</li>
-          <li class="active treeview">
+          <li class="treeview">
             <a href="#">
               <i class="fa fa-dashboard"></i> <span>Dashboard</span>
             </a>
@@ -274,6 +274,11 @@ $tahun = substr($nim,0,2);
             <ul class="treeview-menu">
               <li><a href="<?php echo base_url(); ?>admin/penumpanng"><i class="fa fa-circle-o"></i> Update Informasi</a></li>
             </ul>
+          </li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-user-secret"></i> <span>Admin</span>
+            </a>
           </li>
           <li class="treeview">
             <a href="#">

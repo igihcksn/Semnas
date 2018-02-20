@@ -31,7 +31,7 @@
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-            <span class="icon-bar"></span>                        
+            <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="index.html"><i class="fa fa-snowflake-o" aria-hidden="true"></i> Weddingku</a>
         </div>
@@ -42,7 +42,7 @@
             <li><a href="#">Honeymoon</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="<?= site_url('admin/login')  ?>"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li><a href="<?= site_url('login')  ?>"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
           </ul>
         </div>
       </div>
