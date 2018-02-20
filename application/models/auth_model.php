@@ -17,6 +17,22 @@ class Auth_model extends CI_Model {
     }
     return false;
   }
+  public function status_on($email)
+  {
+    $data = array(
+      'status' => 'Online'
+    );
+    $this->db->where('email',$email);
+		$this->db->update('admin',$data);
+  }
+  public function status_off($email)
+  {
+    $data = array(
+      'status' => 'Offline'
+    );
+    $this->db->where('email',$email);
+		$this->db->update('admin',$data);
+  }
   //this for get user from database
     public function get_admin($key,$val)
     {
@@ -25,6 +41,13 @@ class Auth_model extends CI_Model {
         return $query->row_array();
       }
       return false;
+    }
+    public function get_admin_status()
+    {
+      $this->db->select('*');
+      $this->db->from('admin');
+      $query = $this->db->get();
+      return $result = $query->row_array();;
     }
 
 }

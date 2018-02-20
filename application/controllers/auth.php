@@ -8,6 +8,7 @@ class auth extends CI_Controller {
   parent::__construct();
   $this->load->helper('security');
   $this->load->model('Auth_model');
+  $this->load->model('Admin_model');
 }
 
 	public function index()
@@ -38,6 +39,7 @@ $this->load->view('admin/pass');
       $this->load->view('admin/login');
     }else{
        $user = $this->Auth_model->get_admin('email',$this->input->post('email'));
+       $this->Auth_model->status_on($user['email']);
 
        $_SESSION['nama_admin']    = $user['nama_admin'];
        $_SESSION['nim']    = $user['nim'];
@@ -48,6 +50,9 @@ $this->load->view('admin/pass');
 
 
   public function logout(){
+    $user = $this->Auth_model->get_admin_status();
+
+    $this->Auth_model->status_off($user['email']);
     $this->session->sess_destroy();
     redirect('');
   }

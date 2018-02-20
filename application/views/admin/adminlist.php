@@ -51,8 +51,11 @@
                 <td><?=$datas->nim?></td>
                 <td><?=$datas->nama_admin?></td>
                 <td><?=$datas->email?></td>
+                <?php if ($datas->status == 'Online'){ ?>
                 <td><span class="label label-success">Online</span></td>
-                <!-- <td><span class="label label-danger">Offline</span></td> -->
+              <?php }else{ ?>
+                <td><span class="label label-danger">Offline</span></td>
+              <?php } ?>
                 <td><button type="button" class="btn btn-info">Edit</button> <button type="button" class="btn btn-danger">Delete</button></td>
               </tr>
             <?php $no++; endforeach; ?>
