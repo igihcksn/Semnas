@@ -13,7 +13,7 @@ $route['logout'] = 'auth/logout';
 //bagian backend
 $route['dashboard'] = 'backend';
 
-$route['admin'] = 'backend/admin';
+$route['admin'] = 'auth/login';
   //crud
   $route['addadmin'] = 'backend/add_admin';
 //
