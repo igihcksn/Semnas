@@ -135,7 +135,7 @@ $tahun = substr($nim,0,2);
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="<?php echo site_url(''); ?>"><i class="fa fa-circle-o"></i> Pendaftar</a></li>
+              <li><a href="<?php echo site_url('admin/pendaftar'); ?>"><i class="fa fa-circle-o"></i> Pendaftar</a></li>
               <li><a href="<?php echo site_url(''); ?>"><i class="fa fa-circle-o"></i> Peserta</a></li>
               <li><a href="<?php echo site_url(''); ?>"><i class="fa fa-circle-o"></i> #</a></li>
             </ul>
